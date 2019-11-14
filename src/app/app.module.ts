@@ -5,18 +5,32 @@ import { AppComponent } from './app.component';
 import { ProductComponent } from './product/product.component';
 import { SellerComponent } from './seller/seller.component';
 import { CarsComponent } from './cars/cars.component';
+import { NgifComponent } from './directives/ngif/ngif.component';
+import { SwitchComponent } from './directives/switch/switch.component';
+import { ForComponent } from './directives/for/for.component';
+import { CountriesComponent } from './components/countries/countries.component';
+import {CountriesService} from './countries.service';
+import {Http, HttpModule} from '@angular/http';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductComponent,
     SellerComponent,
-    CarsComponent
+    CarsComponent,
+    NgifComponent,
+    SwitchComponent,
+    ForComponent,
+    CountriesComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [
+    CountriesService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

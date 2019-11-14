@@ -1,0 +1,25 @@
+<div>
+  <table cellpadding="10px" border="4px" cellspacing="5px" align="center" >
+    <thead>
+      <tr>
+        <th>Country Name</th>
+        <th>Capital</th>
+        <th>Region</th>
+        <th>Population</th>
+        <th>Flag</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor='let c of data'>
+        <td>{{c.name}}</td>
+        <td>{{c.capital}}</td>
+        <td>{{c.region}}</td>
+        <td>{{c.population}}</td>
+        <td><img width="100px" height="50px" src="{{c.flag}}" /></td>
+      </tr>
+      <!-- <tr>
+        <td>{{c.capital}}</td>
+      </tr> -->
+    </tbody>
+  </table>
+</div>

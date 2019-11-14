@@ -1,0 +1,35 @@
+
+<table>
+  <thead>
+    <tr>
+      <td>FirstName</td>
+      <td>LastName</td>
+      <td>score</td>
+    </tr>
+  </thead>
+  <tbody *ngFor='let student of getStudents()'>
+    <tr>
+      <td>{{student.fname}}</td>
+      <td>{{student.lname}}</td>
+      <td>{{student.score}}</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+
+<table>
+    <thead>
+      <tr>
+        <td [ngClass]="{thead:true}">Ttile</td>
+        <td [ngClass]="{thead:true}">Genre</td>
+        <td [ngClass]="{thead:true}">Director</td>
+      </tr>
+    </thead>
+    <tbody *ngFor='let movie of getMovies()'>
+      <tr>
+        <td [ngClass]="{tdata:true}">{{movie.title}}</td>
+        <td [ngClass]="{tdata:true}">{{movie.genre}}</td>
+        <td [ngClass]="{tdata:true}">{{movie.director}}</td>
+      </tr>
+    </tbody>
+  </table>
